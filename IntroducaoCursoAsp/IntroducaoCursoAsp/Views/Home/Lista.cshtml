@@ -1,0 +1,25 @@
+﻿@model IntroducaoCursoAsp.Models.Pessoas
+
+@{
+    ViewBag.Title = "Lista";
+}
+
+<h2>Lista</h2>
+<div><b>@Html.LabelFor(x => x.PessoaId)</b></div>
+<div>@Model.PessoaId</div>
+<br />
+<div><b>@Html.LabelFor(x=>x.Nome)</b></div>
+<div>@Model.Nome</div>
+<br />
+<div><b>@Html.LabelFor(x=>x.Tipo)</b></div>
+<div>@Model.Tipo</div>
+<br />
+
+<!--HTML-->
+<a href="~/">Voltar(HTML)</a>
+<br />
+<!--HELPER-->
+@Html.ActionLink("Inicio(HELPER)", "Index", "Home")
+
+
+

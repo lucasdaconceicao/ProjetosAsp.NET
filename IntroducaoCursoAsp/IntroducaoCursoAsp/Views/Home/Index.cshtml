@@ -1,0 +1,62 @@
+﻿@model IntroducaoCursoAsp.Models.Pessoas
+
+@{
+    /**/
+
+    ViewBag.Title = "Index";
+}
+
+<h2>Página Inicial</h2>
+
+<br /><br />
+<!--FORMULARIO HTML-->
+<form action="Home/Lista" method="POST">
+    <fieldset>
+        <legend>Informações de Pessoas utilizando html</legend>
+    </fieldset>
+    <div class="form-group">
+        <label for="PessoaId">Código</label>
+        <input class="form-control" type="number" value="@Model.PessoaId" name="PessoaId" />
+    </div>
+    <div class="form-group">
+        <label for="Nome">Nome</label>
+        <input class="form-control" type="text" value="@Model.Nome" name="Nome" />
+    </div>
+    <div class="form-group">
+        <label for="Tipo">Tipo</label>
+        <input class="form-control" type="text" value="@Model.Tipo" name="Tipo" />
+    </div>
+    <button class="btn btn-primary" type="submit">Enviar dados</button>
+</form>
+<br /><br />
+
+<!--FORMULARIO HELPER-->
+@using (Html.BeginForm("Lista", "Home", FormMethod.Post))
+{
+    <fieldset>
+        <legend>Informações de Pessoas utilizando helper</legend>
+    </fieldset>
+    <div class="form-group">
+        @Html.LabelFor(x => x.PessoaId)
+        @Html.EditorFor(x => x.PessoaId)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.Nome)
+        @Html.EditorFor(x => x.Nome)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.Tipo)
+        @Html.EditorFor(x => x.Tipo)
+    </div>
+    <button class="btn btn-primary" type="submit">Enviar dados</button>
+}
+<!--
+<br />
+<p>@ViewData["PessoaId"]</p>
+<p>@ViewData["Nome"]</p>
+<p>@ViewData["Tipo"]</p>
+<br />
+<p>@ViewBag.Id</p>
+<p>@ViewBag.Nome</p>
+<p>@ViewBag.Tipo</p>
+-->

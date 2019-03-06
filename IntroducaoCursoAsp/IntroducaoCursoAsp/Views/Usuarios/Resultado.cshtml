@@ -1,0 +1,56 @@
+﻿@model IntroducaoCursoAsp.Models.Usuarios
+@{
+    ViewBag.Title = "Resultado Usuários";
+}
+
+<h2>Listar Dados Usuarios</h2>
+<br />
+
+<fieldset>
+    <legend>Usuário</legend>
+</fieldset>
+<div class="editor-label">
+    @Html.DisplayNameFor(m => m.Nome)
+</div>
+<div class="editor-field">
+    @Html.DisplayFor(m => m.Nome)
+</div>
+<div class="editor-label">
+    @Html.DisplayNameFor(m => m.Observações)
+</div>
+<div class="editor-field">
+    @Html.DisplayFor(m => m.Observações)
+</div>
+<div class="editor-label">
+    @Html.DisplayNameFor(m => m.Idade)
+</div>
+<div class="editor-field">
+    @Html.DisplayFor(m => m.Idade)
+</div>
+<div class="editor-label">
+    @Html.DisplayNameFor(m => m.Email)
+</div>
+<div class="editor-field">
+    @Html.DisplayFor(m => m.Email)
+</div>
+<div class="editor-label">
+    @Html.DisplayNameFor(m => m.Login)
+</div>
+<div class="editor-field">
+    @Html.DisplayFor(m => m.Login)
+</div>
+<div class="editor-label">
+    @Html.DisplayNameFor(m => m.Senha)
+</div>
+<div class="editor-field">
+    @Html.DisplayFor(m => m.Senha)
+</div>
+<div class="editor-label">
+    @Html.DisplayNameFor(m => m.ConfirmaSenha)
+</div>
+<div class="editor-field">
+    @Html.DisplayFor(m => m.ConfirmaSenha)
+</div>
+<br />
+@Html.ActionLink("Voltar","Usuario")
+
